@@ -1,0 +1,33 @@
+.fondoColor{
+    -fx-background-color: #3E87DE;
+}
+.buttonCuadrado{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50px;
+    -fx-background-image: url("./img/cuadrado.png");
+}
+.buttonlinea{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50px;
+    -fx-background-image: url("./img/linea.png");
+}
+.buttonCirculo{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50px;
+    -fx-background-image: url("./img/circulo.png");
+}
+.buttonBorrador{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50px;
+    -fx-background-image: url("./img/borrador.png");
+}
+.buttonPincel{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50px;
+    -fx-background-image: url("./img/pincel.png");
+}
+.buttonGuardar{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 50px;
+    -fx-background-image: url("./img/guardar.png");
+}
