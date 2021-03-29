@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" style="-fx-background-color: #8D99AE;" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.covid.Covid">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #8D99AE;">
+         <children>
+            <HBox fx:id="hBox" alignment="CENTER" prefHeight="100.0" prefWidth="701.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+            <HBox fx:id="hBox2" alignment="CENTER" layoutY="115.0" prefHeight="207.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" />
+            <HBox fx:id="hBoxExxplicacion" alignment="CENTER" layoutY="339.0" prefHeight="50.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0">
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="-4.0" layoutY="389.0" prefHeight="60.0" prefWidth="700.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="5.0">
+               <children>
+                  <HBox fx:id="hBVerdad" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <HBox fx:id="hBFalso" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <HBox layoutY="500.0" prefHeight="50.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0">
+               <children>
+                  <HBox fx:id="hBoxRegresar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="hBoxReintentar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox fx:id="hBoxTerminar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="700.0">
+         <center>
+            <VBox prefHeight="412.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="200.0" prefWidth="600.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <VBox prefHeight="201.0" prefWidth="127.0" styleClass="fondoMedidas">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <children>
+                              <ImageView fitHeight="84.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/covid/mascara.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="159.0" text="Usa cubrebocas cada" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="171.0" text="que salgas de casa sobre" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="167.0" text="todo si estas en lugares" textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="177.0" text="con muchas personas." textAlignment="CENTER" />
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="201.0" prefWidth="127.0" styleClass="fondoMedidas">
+                           <children>
+                              <ImageView fitHeight="87.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/covid/lavado_mano.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="162.0" text="Lavate las manos cada " textAlignment="CENTER">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="166.0" text="vez que vuelvas a casa,">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="153.0" text="recuerda que debes de ">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="151.0" text="hacerlo por 20 seg.">
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="201.0" prefWidth="127.0" styleClass="fondoMedidas">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/covid/distanciamiento_social.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="178.0" text="Manten la sana">
+                                 <VBox.margin>
+                                    <Insets top="21.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="153.0" text="distancia." VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <VBox prefHeight="201.0" prefWidth="127.0" styleClass="fondoMedidas">
+                           <children>
+                              <ImageView fitHeight="113.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/covid/quedarse_en_casa.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="Tu casa es el lugar mas">
+                                 <VBox.margin>
+                                    <Insets top="2.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="seguro, pero salir a" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="caminar al aire libre y" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="donde no hay tantas" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="193.0" text="personas no es peligroso" />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="201.0" prefWidth="127.0" styleClass="fondoMedidas">
+                           <children>
+                              <ImageView fitHeight="80.0" fitWidth="82.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/covid/nueva_normalidad.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="Esta es una nueva">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="normalidad, acostubrete " />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="a esta y sigue todas las " />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="medidas de salud." />
+                           </children>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="106.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="84.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../img/principal/covid.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <VBox prefHeight="86.0" prefWidth="437.0">
+                     <children>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" text="COVID-19 (CORONOVIRUS / SARS-COV-2)" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="33.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="43.0" prefWidth="435.0" text="Medidas generales de prevención" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="33.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <ImageView fitHeight="84.0" fitWidth="80.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                     <image>
+                        <Image url="@../img/principal/covid.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Pane prefHeight="106.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="88.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <JFXButton layoutX="16.0" layoutY="8.0" onAction="#regresar" prefHeight="6.0" prefWidth="45.0" styleClass="buttonGeneral" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Medium" size="25.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btnPreguntas" onAction="#preguntas" prefHeight="48.0" prefWidth="527.0" styleClass="buttonGeneral" text="Test para saber si esta listo para dar caminatas " textFill="WHITE">
+                     <font>
+                        <Font name="Barlow Condensed Medium" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <Pane prefHeight="88.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

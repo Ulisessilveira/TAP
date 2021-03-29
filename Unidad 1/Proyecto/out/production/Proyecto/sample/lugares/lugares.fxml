@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="stackPane" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.lugares.Lugares">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #8D99AE;">
+         <children>
+            <BorderPane prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="700.0" style="-fx-background-color: #8D99AE;" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/principal/lugar.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <VBox prefHeight="80.0" prefWidth="371.0">
+                           <children>
+                              <Label text="Lugares interesantes de hoy" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="33.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Visita estos tres lugares para pasar un rato divertido" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <bottom>
+                  <HBox alignment="CENTER_LEFT" prefHeight="0.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton onAction="#regresar" styleClass="buttonGeneral" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </bottom>
+               <center>
+                  <VBox alignment="CENTER" prefHeight="0.0" prefWidth="570.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="hBoxParques" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox fx:id="vBoxParques" alignment="CENTER" prefHeight="80.0" prefWidth="615.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxRestaurantes" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox fx:id="vBoxRestaurantes" alignment="CENTER" prefHeight="80.0" prefWidth="713.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxInteresantes" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox fx:id="vBoxInteresantes" alignment="CENTER" prefHeight="80.0" prefWidth="629.0">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+               <left>
+                  <VBox alignment="CENTER" prefHeight="0.0" prefWidth="130.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox fx:id="hBoxParques1" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/lugares/parque.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="211.0" text="Parques" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxRestaurantes1" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/lugares/restaurante.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="170.0" text="Restaurante" textFill="WHITE">
+                                       <font>
+                                          <Font name="Verdana" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox fx:id="hBoxInteresantes1" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <ImageView fitHeight="110.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/lugares/interesante.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </ImageView>
+                                    <Label alignment="CENTER" prefHeight="17.0" prefWidth="176.0" text="Interesantes" textFill="WHITE" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </left>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

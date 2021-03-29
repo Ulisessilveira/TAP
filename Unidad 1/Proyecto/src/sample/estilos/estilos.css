@@ -1,0 +1,30 @@
+.fondoLogin{
+    -fx-background-color: linear-gradient(from 400px 200px to 400px 10px, #EDF2F4, #8D99AE);
+}
+.botonLogin{
+    -fx-background-color: #D80032;
+}
+.buttonCaminada{
+     -fx-background-radius: 100px;
+     -fx-background-image: url("../img/principal/caminar.png");
+ }
+.buttonCovid{
+    -fx-background-radius: 100px;
+    -fx-background-image: url("../img/principal/covid.png");
+}
+.buttonLugar{
+    -fx-background-radius: 100px;
+    -fx-background-image: url("../img/principal/lugar.png");
+}
+.buttonOpciones{
+     -fx-background-radius: 100px;
+     -fx-background-image: url("../img/principal/opciones.png");
+ }
+.fondoMedidas{
+    -fx-background-radius: 20px;
+    -fx-background-color:  #EDF2F4;
+}
+.buttonGeneral{
+    -fx-background-color: #D80032;
+    -fx-background-radius: 20px;
+}

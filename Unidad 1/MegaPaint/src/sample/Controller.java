@@ -27,7 +27,7 @@ public class Controller {
                 pintarDibujos((newValue.intValue()));
             }
         });
-        comboOpciones.getItems().addAll("Cuadricula", "Ajedrez", "Estrella", "Curva","Estrella Doble", "Estrella Tapiz");
+        comboOpciones.getItems().addAll("Cuadricula", "Ajedrez", "Estrella", "Curva","Estrella Doble", "Estrella Tapiz", "Circulos");
         //Traer pixeles para manipularles
 
         /*context.setFill(Color.BLUE);//fill relleno color a pintar
@@ -137,6 +137,23 @@ public class Controller {
                 context.strokeLine(mitadAncho,divisiones*j,mitadAncho-(divisiones*j),mitadAlto);
                 context.strokeLine(mitadAncho,lienzo.getHeight()-(divisiones*j),mitadAncho-(divisiones*j),mitadAlto);
                 context.strokeLine(mitadAncho,lienzo.getHeight()-(divisiones*j),mitadAncho+(divisiones*j),mitadAlto);
+            }
+        }else if (comboOpciones.getSelectionModel().getSelectedIndex() == 6){
+            //Circulos
+            //Si ve esto algun dia que sepa que me lo dieron/robe pero soy un ser maso menos repetable y solo lo estoy viendo para saber como se hace
+            //y no para hacer trampa :)
+            double C = 360 / valor;
+            double Ax = lienzo.getWidth() / 4;
+            double Ay = lienzo.getHeight() / 4;
+            double r = Math.toRadians(0);
+            double x = Math.round(Ax * Math.cos(r));
+            double y = (Ay * Math.sin(r));
+            while (r<=2*Math.PI) {
+                context.strokeOval(x + lienzo.getWidth() / 4, y + lienzo.getHeight() / 4, lienzo.getWidth() / 2, lienzo.getHeight() / 2);
+                r=r+Math.toRadians(C);
+                x=Math.round(Ax*Math.cos(r));
+                y=(Ay*Math.sin(r));
+
             }
         }
     }

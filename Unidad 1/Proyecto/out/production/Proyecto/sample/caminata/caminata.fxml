@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.caminata.Caminata">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #8D99AE;">
+         <children>
+            <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <center>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="186.0" prefWidth="700.0">
+                           <children>
+                              <TableView fx:id="tableView" prefHeight="200.0" prefWidth="417.0" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="700.0">
+                           <children>
+                              <Label text="Caminaste un total de" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txtKilometrosRecorridos" alignment="CENTER" disable="true" text="0" />
+                              <Label text="Kilometros" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtDia" alignment="CENTER" focusColor="#d80032" />
+                                    <Label text="Día" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtDistancia" alignment="CENTER" focusColor="#d80032" />
+                                    <Label text="Distancia(Km)" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtPasos" alignment="CENTER" focusColor="#d80032" />
+                                    <Label prefHeight="26.0" prefWidth="48.0" text="Pasos" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtTiempo" alignment="CENTER" focusColor="#d80032" />
+                                    <Label text="Tiempo(min)" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtLatidos" alignment="CENTER" focusColor="#d80032" />
+                                    <Label text="Latidos" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+               <top>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/principal/caminar.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Tu reccorido " textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </top>
+               <bottom>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton onAction="#regresar" styleClass="buttonGeneral" text="&lt;" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton onAction="#insertarRecorrido" styleClass="buttonGeneral" text="Insertar" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="25.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

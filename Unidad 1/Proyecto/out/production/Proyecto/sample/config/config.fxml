@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.config.Config">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #8D99AE;">
+         <children>
+            <BorderPane prefHeight="500.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/principal/opciones.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="15.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label fx:id="labelNombre" text="Ajustes :D" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="33.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </top>
+               <bottom>
+                  <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton alignment="TOP_LEFT" onAction="#regresar" styleClass="buttonGeneral" text="&lt;" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="20.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </bottom>
+               <center>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXToggleButton fx:id="tButtonTemaO" onAction="#cambiar" text="Tema oscuro" textFill="WHITE" toggleColor="#d80032" toggleLineColor="#e1495d">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="30.0" />
+                           </font>
+                        </JFXToggleButton>
+                        <Label fx:id="labelTamanio" text="--------Tamaño de fuente--------" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="30.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="585.0">
+                           <children>
+                              <Pane prefHeight="113.0" prefWidth="398.0">
+                                 <children>
+                                    <JFXRadioButton fx:id="rBG" layoutX="163.0" layoutY="63.0" onAction="#grande" prefWidth="73.0" text="Grande" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="18.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rBM" layoutX="163.0" layoutY="41.0" onAction="#mediano" text="Mediano" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="15.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="rBP" layoutX="162.0" layoutY="14.0" onAction="#pequenio" stylesheets="@../estilos/estilos.css" text="Pequeño" textFill="WHITE">
+                                       <font>
+                                          <Font name="Barlow Condensed Regular" size="15.0" />
+                                       </font>
+                                    </JFXRadioButton>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <Label fx:id="labelTamanio2" text="------------------------------------" textFill="WHITE">
+                           <font>
+                              <Font name="Barlow Condensed Regular" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
