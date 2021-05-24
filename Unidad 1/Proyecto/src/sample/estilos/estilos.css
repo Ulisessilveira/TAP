@@ -9,9 +9,9 @@
      -fx-background-image: url("../img/principal/caminar.png");
  }
 .buttonCovid{
-    -fx-background-radius: 100px;
-    -fx-background-image: url("../img/principal/covid.png");
-}
+     -fx-background-radius: 100px;
+     -fx-background-image: url("../img/principal/covid.png");
+ }
 .buttonLugar{
     -fx-background-radius: 100px;
     -fx-background-image: url("../img/principal/lugar.png");

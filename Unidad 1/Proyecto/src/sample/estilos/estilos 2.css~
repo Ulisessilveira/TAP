@@ -1,0 +1,14 @@
+.fondoLogin{
+    -fx-background-color: linear-gradient(from 400px 200px to 400px 10px, #EDF2F4, #8D99AE);
+}
+.botonLogin{
+    -fx-background-color: #D80032;
+}
+.buttonCovid{
+    -fx-background-radius: 50px;
+    -fx-background-image: url("../img/icon.png");
+}
+.buttonOpciones{
+    -fx-background-radius: 50px;
+    -fx-background-image: url("../img/opciones.png");
+}

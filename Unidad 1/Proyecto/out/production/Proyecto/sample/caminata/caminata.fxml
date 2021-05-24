@@ -35,7 +35,7 @@
                                  </font>
                               </Label>
                               <JFXTextField fx:id="txtKilometrosRecorridos" alignment="CENTER" disable="true" text="0" />
-                              <Label text="Kilometros" textFill="WHITE">
+                              <Label text="Kilómetros" textFill="WHITE">
                                  <font>
                                     <Font name="Barlow Condensed Regular" size="25.0" />
                                  </font>
@@ -125,7 +125,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Label text="Tu reccorido " textFill="WHITE">
+                        <Label text="Tu recorrido " textFill="WHITE">
                            <font>
                               <Font name="Barlow Condensed Regular" size="33.0" />
                            </font>

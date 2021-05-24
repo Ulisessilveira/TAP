@@ -201,8 +201,8 @@
                                     <Insets top="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="normalidad, acostubrete " />
-                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="a esta y sigue todas las " />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="normalidad, acostubrate" />
+                              <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="a está y sigue todas las " />
                               <Label alignment="CENTER" prefHeight="17.0" prefWidth="205.0" text="medidas de salud." />
                            </children>
                            <HBox.margin>
