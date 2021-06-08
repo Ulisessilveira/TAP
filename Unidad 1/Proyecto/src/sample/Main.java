@@ -2,7 +2,6 @@ package sample;
 
 import animatefx.animation.FadeIn;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,7 +16,7 @@ public class Main extends Application {
         stage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("login/login.fxml"));
         primaryStage.setTitle("Hike");
-        primaryStage.setScene(new Scene(root, 700, 650));
+        primaryStage.setScene(new Scene(root, 400, 500));
         primaryStage.getIcons().add(new Image("/sample/img/icon.png"));
         primaryStage.show();
         new FadeIn(root).play();

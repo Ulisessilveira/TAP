@@ -20,54 +20,81 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
+import sample.models.Conexion;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Caminata {
     @FXML AnchorPane anchorPane;
     @FXML StackPane stackPane;
     @FXML TableView tableView;
-    @FXML TextField txtDia, txtDistancia, txtPasos, txtTiempo, txtLatidos,txtKilometrosRecorridos;
-    TableColumn columnDia = new TableColumn("Día");
+    @FXML TextField txtFecha, txtDistancia, txtPasos, txtTiempo, txtLatidos,txtKilometrosRecorridos;
+    Conexion conexion;
+    TableColumn columnId = new TableColumn("ID");
+    TableColumn columnFecha = new TableColumn("Fecha (AAAA-MM-DD)");
     TableColumn columnDistancia = new TableColumn("Distancia(km)");
     TableColumn columnPasos = new TableColumn("Pasos");
-    TableColumn columnTiempo = new TableColumn("Tiempo");
-    TableColumn columnLatidos = new TableColumn("Latidos");
+    TableColumn columnTiempo = new TableColumn("Tiempo (min)");
+    TableColumn columnLatidos = new TableColumn("Latidos promedio");
     ObservableList<Recorrido> list = FXCollections.observableArrayList();
-    @FXML protected void  initialize(){
-        columnDia.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("Dia"));
-        columnDistancia.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("Distancia"));
-        columnPasos.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("Pasos"));
-        columnTiempo.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("Tiempo"));
-        columnLatidos.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("Latidos"));
-        tableView.getColumns().addAll(columnDia,columnDistancia,columnPasos,columnTiempo,columnLatidos);
+    @FXML protected void  initialize() throws SQLException {
+        conexion = new Conexion();
+        columnId.setMinWidth(90);
+        columnFecha.setMinWidth(150);
+        columnDistancia.setMinWidth(100);
+        columnPasos.setMinWidth(80);
+        columnTiempo.setMinWidth(100);
+        columnLatidos.setMinWidth(125);
+        columnId.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("id"));
+        columnFecha.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("fecha"));
+        columnDistancia.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("distancia"));
+        columnPasos.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("pasos"));
+        columnTiempo.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("tiempo"));
+        columnLatidos.setCellValueFactory(new PropertyValueFactory<Recorrido,String>("latidos"));
+        tableView.getColumns().addAll(columnId, columnFecha,columnDistancia,columnPasos,columnTiempo,columnLatidos);
         tableView.setItems(list);
+        recargar();
     }
 
-    public void insertarRecorrido(ActionEvent event){
-        try {
-            int dia = Integer.parseInt(txtDia.getText());
-            int distancia = Integer.parseInt(txtDistancia.getText());
-            int pasos = Integer.parseInt(txtPasos.getText());
-            int tiempo = Integer.parseInt(txtTiempo.getText());
-            int latidos = Integer.parseInt(txtLatidos.getText());
-            list.addAll(new Recorrido(dia,distancia,pasos,tiempo,latidos));
-            System.out.println(dia);
-            System.out.println(distancia);
-            System.out.println(pasos);
-            System.out.println(tiempo);
-            System.out.println(latidos);
-            txtDia.setText("");
-            txtDistancia.setText("");
-            txtPasos.setText("");
-            txtTiempo.setText("");
-            txtLatidos.setText("");
-            int klRecorridosFinal = Integer.parseInt(txtKilometrosRecorridos.getText()) + distancia;
-            txtKilometrosRecorridos.setText(""+ klRecorridosFinal);
-        } catch (Exception e) {
+    public void recargar() throws SQLException {
+        //Insertar en la tabla
+        ResultSet resultSet = conexion.consultar("SELECT * FROM recorrido ORDER BY id ASC");
+        list.clear();
+        if (resultSet != null){
+            while (resultSet.next()){
+                list.add(new Recorrido(
+                        resultSet.getObject("id").toString(),
+                        resultSet.getObject("fecha").toString(),
+                        resultSet.getObject("distancia").toString(),
+                        resultSet.getObject("pasos").toString(),
+                        resultSet.getObject("tiempo").toString(),
+                        resultSet.getObject("latidos_prom").toString()));
+            }
+        }
+    }
+    public void insertarRecorrido(ActionEvent event) throws SQLException {
+        if (!txtFecha.getText().trim().equals("") && !txtDistancia.getText().trim().equals("") && !txtPasos.getText().trim().equals("") &&
+                !txtTiempo.getText().trim().equals("") && !txtLatidos.getText().trim().equals("")){
+            //Insertar en la base de datos
+            String f=txtFecha.getText();
+            Double d=Double.parseDouble(txtDistancia.getText());
+            String p=txtPasos.getText();
+            String t=txtTiempo.getText();
+            String l=txtLatidos.getText();
+            conexion.insmodel("INSERT INTO recorrido(fecha, distancia, pasos, tiempo, latidos_prom) VALUES ('"+f+"', "+d+", "+p+", "+t+", "+l+")");
+            System.out.println("INSERT INTO recorrido(fecha, distancia, pasos, tiempo, latidos_prom) VALUES ('"+f+"', "+d+", "+p+", "+t+", "+l+")");
+            txtFecha.setText(""); txtDistancia.setText(""); txtPasos.setText(""); txtTiempo.setText(""); txtLatidos.setText("");
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Bien hecho");
+            alert.setContentText("Registro insertado correctamente");
+            alert.show();
+            recargar();
+        }else {
             Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Hike");
-            alert.setContentText("Inserte un dato valido");
+            alert.setTitle("ERROR");
+            alert.setContentText("Favor de llenar todos los campos");
             alert.show();
         }
     }

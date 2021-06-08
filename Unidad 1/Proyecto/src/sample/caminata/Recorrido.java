@@ -1,79 +1,93 @@
 package sample.caminata;
 
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 public class Recorrido {
-    SimpleIntegerProperty dia;
-    SimpleIntegerProperty distancia;
-    SimpleIntegerProperty pasos;
-    SimpleIntegerProperty tiempo;
-    SimpleIntegerProperty latidos;
+    SimpleStringProperty id;
+    SimpleStringProperty fecha;
+    SimpleStringProperty distancia;
+    SimpleStringProperty pasos;
+    SimpleStringProperty tiempo;
+    SimpleStringProperty latidos;
 
-    public Recorrido(int dia, int distancia, int pasos, int tiempo, int latidos) {
-        this.dia = new SimpleIntegerProperty(dia);
-        this.distancia = new  SimpleIntegerProperty(distancia);
-        this.pasos = new SimpleIntegerProperty(pasos);
-        this.tiempo = new SimpleIntegerProperty(tiempo);
-        this.latidos = new SimpleIntegerProperty(latidos);
+    public Recorrido(String id, String fecha, String distancia, String pasos, String tiempo, String latidos) {
+        this.id = new SimpleStringProperty(id);
+        this.fecha = new SimpleStringProperty(fecha);
+        this.distancia = new SimpleStringProperty(distancia);
+        this.pasos = new SimpleStringProperty(pasos);
+        this.tiempo = new SimpleStringProperty(tiempo);
+        this.latidos = new SimpleStringProperty(latidos);
     }
 
-    public int getDia() {
-        return dia.get();
+    public String getId() {
+        return id.get();
     }
 
-    public SimpleIntegerProperty diaProperty() {
-        return dia;
+    public SimpleStringProperty idProperty() {
+        return id;
     }
 
-    public void setDia(int dia) {
-        this.dia.set(dia);
+    public void setId(String id) {
+        this.id.set(id);
     }
 
-    public int getDistancia() {
+    public String getFecha() {
+        return fecha.get();
+    }
+
+    public SimpleStringProperty fechaProperty() {
+        return fecha;
+    }
+
+    public void setFecha(String fecha) {
+        this.fecha.set(fecha);
+    }
+
+    public String getDistancia() {
         return distancia.get();
     }
 
-    public SimpleIntegerProperty distanciaProperty() {
+    public SimpleStringProperty distanciaProperty() {
         return distancia;
     }
 
-    public void setDistancia(int distancia) {
+    public void setDistancia(String distancia) {
         this.distancia.set(distancia);
     }
 
-    public int getPasos() {
+    public String getPasos() {
         return pasos.get();
     }
 
-    public SimpleIntegerProperty pasosProperty() {
+    public SimpleStringProperty pasosProperty() {
         return pasos;
     }
 
-    public void setPasos(int pasos) {
+    public void setPasos(String pasos) {
         this.pasos.set(pasos);
     }
 
-    public int getTiempo() {
+    public String getTiempo() {
         return tiempo.get();
     }
 
-    public SimpleIntegerProperty tiempoProperty() {
+    public SimpleStringProperty tiempoProperty() {
         return tiempo;
     }
 
-    public void setTiempo(int tiempo) {
+    public void setTiempo(String tiempo) {
         this.tiempo.set(tiempo);
     }
 
-    public int getLatidos() {
+    public String getLatidos() {
         return latidos.get();
     }
 
-    public SimpleIntegerProperty latidosProperty() {
+    public SimpleStringProperty latidosProperty() {
         return latidos;
     }
 
-    public void setLatidos(int latidos) {
+    public void setLatidos(String latidos) {
         this.latidos.set(latidos);
     }
 }

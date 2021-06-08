@@ -22,94 +22,72 @@
                <center>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                      <children>
+                        <HBox alignment="CENTER" prefHeight="96.0" prefWidth="700.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtFecha" alignment="TOP_LEFT" focusColor="#d80032" prefHeight="25.0" prefWidth="108.0" promptText="Fecha (AA-MM-DD)">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></JFXTextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="80.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtDistancia" alignment="TOP_LEFT" focusColor="#d80032" promptText="Distancia (km)">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></JFXTextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="80.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtPasos" alignment="TOP_LEFT" focusColor="#d80032" promptText="Pasos">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></JFXTextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="80.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtTiempo" alignment="TOP_LEFT" focusColor="#d80032" promptText="Tiempo (min)">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></JFXTextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="80.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                 <children>
+                                    <JFXTextField fx:id="txtLatidos" alignment="TOP_LEFT" focusColor="#d80032" promptText="Latidos promedio">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></JFXTextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="80.0" left="20.0" right="20.0" top="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
                         <HBox alignment="CENTER" prefHeight="186.0" prefWidth="700.0">
                            <children>
-                              <TableView fx:id="tableView" prefHeight="200.0" prefWidth="417.0" />
+                              <TableView fx:id="tableView" prefHeight="166.0" prefWidth="650.0" />
                            </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="58.0" prefWidth="700.0">
-                           <children>
-                              <Label text="Caminaste un total de" textFill="WHITE">
-                                 <font>
-                                    <Font name="Barlow Condensed Regular" size="25.0" />
-                                 </font>
-                              </Label>
-                              <JFXTextField fx:id="txtKilometrosRecorridos" alignment="CENTER" disable="true" text="0" />
-                              <Label text="Kilómetros" textFill="WHITE">
-                                 <font>
-                                    <Font name="Barlow Condensed Regular" size="25.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <JFXTextField fx:id="txtDia" alignment="CENTER" focusColor="#d80032" />
-                                    <Label text="Día" textFill="WHITE">
-                                       <font>
-                                          <Font name="Barlow Condensed Regular" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <JFXTextField fx:id="txtDistancia" alignment="CENTER" focusColor="#d80032" />
-                                    <Label text="Distancia(Km)" textFill="WHITE">
-                                       <font>
-                                          <Font name="Barlow Condensed Regular" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <JFXTextField fx:id="txtPasos" alignment="CENTER" focusColor="#d80032" />
-                                    <Label prefHeight="26.0" prefWidth="48.0" text="Pasos" textFill="WHITE">
-                                       <font>
-                                          <Font name="Barlow Condensed Regular" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <JFXTextField fx:id="txtTiempo" alignment="CENTER" focusColor="#d80032" />
-                                    <Label text="Tiempo(min)" textFill="WHITE">
-                                       <font>
-                                          <Font name="Barlow Condensed Regular" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </VBox>
-                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
-                                 <children>
-                                    <JFXTextField fx:id="txtLatidos" alignment="CENTER" focusColor="#d80032" />
-                                    <Label text="Latidos" textFill="WHITE">
-                                       <font>
-                                          <Font name="Barlow Condensed Regular" size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                                 <HBox.margin>
-                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                 </HBox.margin>
-                              </VBox>
-                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
                         </HBox>
                      </children>
                   </VBox>
@@ -122,7 +100,7 @@
                               <Image url="@../img/principal/caminar.png" />
                            </image>
                            <HBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                            </HBox.margin>
                         </ImageView>
                         <Label text="Tu recorrido " textFill="WHITE">
