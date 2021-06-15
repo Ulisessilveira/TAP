@@ -22,11 +22,15 @@ public class Login {
     @FXML JFXPasswordField txtPassword;
     String[][] arrayUsuarios = new String[2][3];
     @FXML protected void initialize() {
-        arrayUsuarios[0][0]="Ulises Silveira";arrayUsuarios[0][1]="uli";arrayUsuarios[0][2]="123";
-        arrayUsuarios[1][0]="Luis Alberto";arrayUsuarios[1][1]="Luis";arrayUsuarios[1][2]="123";
         conexion=new Conexion();
     }
     public void cambiarPantalla(ActionEvent event) throws SQLException, IOException {ingresar();}
+    public void crear(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("crear.fxml"));
+        Scene scene = new Scene(root);
+        Main.stage.setScene(scene);
+        new FadeInDown(root).play();
+    }
     public void ingresar() throws SQLException, IOException {
         String email = txtUsuario.getText();
         String pass = txtPassword.getText();
@@ -40,8 +44,7 @@ public class Login {
                 alert.setContentText("Bienvenido " + resultSet.getObject("nombre"));
                 alert.show();
                 cont++;
-                //System.out.println(resultSet.getObject("nombre"));
-                //System.out.println(resultSet.getObject("password"));
+                Main.nombreUsuario= (String) resultSet.getObject("nombre");
 
             }
             if (cont==0){
@@ -53,29 +56,7 @@ public class Login {
                 Parent root = FXMLLoader.load(getClass().getResource("../principal/principal.fxml"));
                 Scene scene = new Scene(root);
                 Main.stage.setScene(scene);
-                new FadeInUp(root).play();
             }
         }
-        /*String u=txtUsuario.getText();
-        String p=txtPassword.getText();
-        Busqueda busqueda= new Busqueda();
-        int indice = busqueda.secuencial(arrayUsuarios,u,p);
-        if(indice>= 0){
-            try {
-                Main.nombreUsuario=arrayUsuarios[indice][0];
-                System.out.println("Bienvenido " + arrayUsuarios[indice][0]);
-                Parent root = FXMLLoader.load(getClass().getResource("../principal/principal.fxml"));
-                Scene scene = new Scene(root);
-                Main.stage.setScene(scene);
-                new FadeInUp(root).play();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }else {
-            Alert alert=new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Hike");
-            alert.setContentText("DATOS INVALIDOS");
-            alert.show();
-        }*/
     }
 }

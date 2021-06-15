@@ -99,6 +99,15 @@
                      </children>
                   </VBox>
                </center>
+               <bottom>
+                  <HBox prefHeight="73.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                        <JFXButton fx:id="btnAdmin" onAction="#administrar" styleClass="btnEditar" text="Administrar perfiles" visible="false" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </bottom>
             </BorderPane>
          </children>
       </AnchorPane>

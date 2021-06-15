@@ -1,6 +1,5 @@
 package sample.config;
 
-import animatefx.animation.*;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" stylesheets="@../estilos/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.administracion.administracion">
+   <children>
+      <AnchorPane fx:id="anchorPane" prefHeight="650.0" prefWidth="700.0" style="-fx-background-color: #EDF2F4;">
+         <children>
+            <BorderPane prefHeight="650.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #2B2D42;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="116.0" prefWidth="482.0">
+                           <children>
+                              <Label text="Bienvenido señor admin" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label text="Aquí está el control absoluto sobre control de los perfiles" textFill="WHITE">
+                                 <font>
+                                    <Font name="Barlow Condensed Regular" size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <ImageView fitHeight="113.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/admin/admin.jpg" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TableView fx:id="table" prefHeight="200.0" prefWidth="660.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </TableView>
+                        <HBox prefHeight="60.0" prefWidth="700.0">
+                           <children>
+                              <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                              <JFXTextField fx:id="txtNombre" promptText="Nombre">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtApellido" promptText="Apellido">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtPassword" promptText="Password">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtEmail" promptText="Email">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                              <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="49.0" prefWidth="700.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                              <VBox prefHeight="100.0" prefWidth="263.0">
+                                 <children>
+                                    <JFXButton fx:id="btnActualizar" onAction="#actualizar" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: #2B2D42;" text="Actualizar" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnCancelar" onAction="#cancelar" prefHeight="30.0" prefWidth="272.0" style="-fx-background-color: #2B2D42;" text="Cancelar" textFill="WHITE" visible="false" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </center>
+               <bottom>
+                  <HBox prefHeight="26.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton onAction="#regresar" styleClass="btnEditar" text="Regresar">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

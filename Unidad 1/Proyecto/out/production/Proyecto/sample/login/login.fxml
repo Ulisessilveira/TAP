@@ -38,8 +38,8 @@
                         <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                         <VBox prefHeight="105.0" prefWidth="260.0">
                            <children>
-                              <JFXTextField fx:id="txtUsuario" focusColor="#d80032" prefHeight="25.0" prefWidth="191.0" promptText="Usuario" />
-                              <JFXPasswordField fx:id="txtPassword" focusColor="#d80032" prefHeight="25.0" prefWidth="191.0" promptText="Password">
+                              <JFXTextField fx:id="txtUsuario" focusColor="#d80032" prefHeight="25.0" prefWidth="191.0" promptText="Usuario" text="admin@gmail.com" />
+                              <JFXPasswordField fx:id="txtPassword" focusColor="#d80032" prefHeight="25.0" prefWidth="191.0" promptText="Password" text="123">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
@@ -47,7 +47,7 @@
                               <HBox prefHeight="100.0" prefWidth="200.0">
                                  <children>
                                     <Pane prefHeight="40.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
-                                    <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#cambiarPantalla" prefHeight="25.0" prefWidth="109.0" styleClass="botonLogin" text="Iniciar sesión" textFill="WHITE">
+                                    <JFXButton fx:id="btbIniciar" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#cambiarPantalla" prefHeight="25.0" prefWidth="109.0" styleClass="botonLogin" text="Iniciar sesión" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets top="20.0" />
                                        </HBox.margin>
@@ -66,6 +66,15 @@
                </children>
             </VBox>
          </center>
+         <bottom>
+            <HBox prefHeight="60.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton buttonType="RAISED" onAction="#crear" styleClass="botonLogin" text="Crear cuenta nueva en hike" textFill="WHITE" />
+                  <Pane prefHeight="100.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>

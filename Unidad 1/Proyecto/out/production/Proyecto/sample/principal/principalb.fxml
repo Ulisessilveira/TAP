@@ -100,10 +100,10 @@
                   </VBox>
                </center>
                <bottom>
-                  <HBox prefHeight="73.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+                  <HBox prefHeight="52.0" prefWidth="700.0" BorderPane.alignment="CENTER">
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                        <JFXButton fx:id="btnAdmin" onAction="#administrar" styleClass="btnEditar" text="Administrar perfiles" visible="false" />
+                        <JFXButton fx:id="btnAdmin" onAction="#admin" prefHeight="3.0" prefWidth="160.0" styleClass="btnEditar" text="Administracion de usuarios" visible="false" />
                         <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>

@@ -28,3 +28,11 @@
     -fx-background-color: #D80032;
     -fx-background-radius: 20px;
 }
+.btnEditar{
+    -fx-background-color:#0d46a1;
+    -fx-text-fill:#FFFFFF;
+}
+.btnEliminar{
+    -fx-background-color:#fc033d;
+    -fx-text-fill:#FFFFFF;
+}
